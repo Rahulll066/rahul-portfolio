@@ -1,31 +1,83 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiMysql,
+  SiPostgresql,
+  SiSolana,
+  SiJavascript,
+  SiCplusplus,
+  SiGithub,
+} from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+import { GitBranch } from "lucide-react";
 
 const skillCategories = [
   {
     title: "Frontend",
-    skills: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+    skills: [
+      { name: "React", icon: SiReact, color: "#61DAFB" },
+      { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
+      { name: "Tailwind", icon: SiTailwindcss, color: "#38BDF8" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+    ],
   },
   {
-    title: "Backend",
-    skills: ["Node.js", "Express.js", "REST APIs", "Authentication"],
+    title: "Backend & APIs",
+    skills: [
+      { name: "Node.js", icon: SiNodedotjs, color: "#3C873A" },
+      { name: "Express", icon: SiExpress, color: "#ffffff" },
+      { name: "REST APIs", icon: GitBranch, color: "#22c55e" },
+      { name: "Authentication", icon: GitBranch, color: "#f59e0b" },
+    ],
   },
   {
-    title: "Languages",
-    skills: ["Java", "C++", "JavaScript", "TypeScript"],
+    title: "Databases",
+    skills: [
+      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+      { name: "MySQL", icon: SiMysql, color: "#00758F" },
+      { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+    ],
   },
   {
-    title: "Database",
-    skills: ["MongoDB", "MySQL", "PostgreSQL"],
+    title: "DevOps & Tools",
+    skills: [
+      { name: "Git", icon: GitBranch, color: "#F05032" },
+      { name: "GitHub", icon: SiGithub, color: "#ffffff" },
+      { name: "Deployment", icon: GitBranch, color: "#22c55e" },
+    ],
   },
   {
     title: "Blockchain",
-    skills: ["Solana", "Web3.js", "dApp Development"],
+    skills: [
+      { name: "Solana", icon: SiSolana, color: "#9945FF" },
+      { name: "Web3.js", icon: SiJavascript, color: "#F7DF1E" },
+      { name: "dApp Dev", icon: SiSolana, color: "#14F195" },
+    ],
   },
   {
-    title: "Tools & Concepts",
-    skills: ["Git", "GitHub", "DSA", "AI/ML Basics"],
+    title: "Languages",
+    skills: [
+      { name: "Java", icon: FaJava, color: "#f89820" },
+      { name: "C++", icon: SiCplusplus, color: "#00599C" },
+      { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+    ],
+  },
+  {
+    title: "Concepts",
+    skills: [
+      { name: "DSA", icon: SiCplusplus, color: "#00599C" },
+      { name: "System Design", icon: GitBranch, color: "#22c55e" },
+      { name: "AI/ML", icon: SiJavascript, color: "#F7DF1E" },
+    ],
   },
 ];
 
@@ -41,9 +93,7 @@ export default function SkillsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-mono text-primary text-sm mb-2">
-            {"// 02. Skills"}
-          </p>
+          
 
           <h2 className="text-3xl md:text-4xl font-bold mb-12">
             Tech <span className="gradient-text">Stack</span>
@@ -51,7 +101,7 @@ export default function SkillsSection() {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((cat, i) => (
             <motion.div
               key={cat.title}
@@ -65,15 +115,28 @@ export default function SkillsSection() {
                 {`{${cat.title}}`}
               </h3>
 
-              <div className="flex flex-wrap gap-2">
-                {cat.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1.5 text-xs rounded-full bg-primary/10 text-primary border border-primary/20 font-mono transition-all hover:bg-primary/20 hover:scale-105"
-                  >
-                    {skill}
-                  </span>
-                ))}
+              <div className="flex flex-wrap gap-3">
+                {cat.skills.map((skill) => {
+                  const Icon = skill.icon;
+                  return (
+                    <div
+                      key={skill.name}
+                      className="flex items-center gap-2 px-3 py-1.5 text-xs rounded-full border border-primary/20 font-mono transition-all duration-300 hover:scale-110"
+                      style={{
+                        backgroundColor: "rgba(255,255,255,0.05)",
+                        boxShadow: `0 0 10px ${skill.color}33`,
+                      }}
+                    >
+                      <Icon
+                        className="text-sm"
+                        style={{ color: skill.color }}
+                      />
+                      <span className="text-foreground">
+                        {skill.name}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </motion.div>
           ))}

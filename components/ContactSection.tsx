@@ -31,17 +31,13 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <p className="font-mono text-primary text-sm mb-2">
-            {"// 05. Contact"}
-          </p>
-
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Let's <span className="gradient-text">Connect</span>
           </h2>
 
           <p className="text-muted-foreground max-w-lg mx-auto">
-            I'm currently open to new opportunities. Whether you have a
-            question or just want to say hi, feel free to reach out!
+            I am currently open to new opportunities. 
+            Please feel free to reach out for any inquiries or potential collaborations.
           </p>
         </motion.div>
 
@@ -70,7 +66,7 @@ export default function ContactSection() {
             </a>
 
             <a
-              href="https://linkedin.com/in/rahul-sai-nadh"
+              href="https://www.linkedin.com/in/rahul-sai-nadh-638a21324/"
               target="_blank"
               rel="noopener noreferrer"
               className="glass-hover p-4 flex items-center gap-4 group"

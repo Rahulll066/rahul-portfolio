@@ -22,7 +22,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // 🔥 Smooth scroll handler (upgrade)
+
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const el = document.querySelector(id);
@@ -51,7 +51,7 @@ export default function Navbar() {
           onClick={(e) => handleScroll(e, "#")}
           className="text-xl font-bold gradient-text font-mono"
         >
-          {"<RS />"}
+          {"<Rahul />"}
         </a>
 
         {/* Desktop */}
