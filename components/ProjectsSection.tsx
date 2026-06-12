@@ -51,13 +51,13 @@ const projects = [
     github: "https://github.com/Rahulll066/TedxVjit-2025",
   },
   {
-    title: "Youtube Clone",
+    title: "Play Zone",
     description:
-      "Built a simple YouTubeClone UI using HTML and CSS.",
+      "Created a real-time multiplayer gaming application using Socket.IO.",
     tech: ["HTML", "CSS"],
-    image: "https://ik.imagekit.io/0tglkhk4r/Projects/Screenshot%202026-03-20%20201433.png",
-    live: "https://github.com/Rahulll066/Youtube-Clone",
-    github: "https://github.com/Rahulll066/Youtube-Clone",
+    image: "https://ik.imagekit.io/0tglkhk4r/Projects/Screenshot%202026-06-12%20150811.png",
+    live: "https://playzone-realtime-multiplayer.vercel.app/",
+    github: "https://github.com/Rahulll066/PlayZone",
   },
 ];
 
