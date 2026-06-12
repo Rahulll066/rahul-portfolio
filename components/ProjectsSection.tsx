@@ -33,13 +33,13 @@ const projects = [
     github: "https://github.com/Rahulll066/SolanaDev",
   },
   {
-    title: "Orbit",
+    title: "Play Zone",
     description:
-      "Full stack productivity dashboard for managing links and notes.",
-    tech: ["React", "Node.js", "MongoDB"],
-    image: "https://ik.imagekit.io/0tglkhk4r/Projects/Screenshot%202026-03-20%20195445.png?updatedAt=1774016791183",
-    live: "https://orbit-zeta-one.vercel.app/",
-    github: "https://github.com/Rahulll066/Orbit",
+      "Created a real-time multiplayer gaming application using Socket.IO.",
+    tech: ["Next.js", "Socket.IO"],
+    image: "https://ik.imagekit.io/0tglkhk4r/Projects/Screenshot%202026-06-12%20150811.png",
+    live: "https://playzone-realtime-multiplayer.vercel.app/",
+    github: "https://github.com/Rahulll066/PlayZone",
   },
   {
     title: "TEDxVJIT Website",
@@ -51,13 +51,13 @@ const projects = [
     github: "https://github.com/Rahulll066/TedxVjit-2025",
   },
   {
-    title: "Play Zone",
+    title: "Orbit",
     description:
-      "Created a real-time multiplayer gaming application using Socket.IO.",
-    tech: ["HTML", "CSS"],
-    image: "https://ik.imagekit.io/0tglkhk4r/Projects/Screenshot%202026-06-12%20150811.png",
-    live: "https://playzone-realtime-multiplayer.vercel.app/",
-    github: "https://github.com/Rahulll066/PlayZone",
+      "Full stack productivity dashboard for managing links and notes.",
+    tech: ["React", "Node.js", "MongoDB"],
+    image: "https://ik.imagekit.io/0tglkhk4r/Projects/Screenshot%202026-03-20%20195445.png?updatedAt=1774016791183",
+    live: "https://orbit-zeta-one.vercel.app/",
+    github: "https://github.com/Rahulll066/Orbit",
   },
 ];
 
